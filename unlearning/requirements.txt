@@ -1,0 +1,7 @@
+# JURECA A100 reference environment, Python 3.12.15
+--extra-index-url https://download.pytorch.org/whl/cu132
+torch==2.15.0+cu132
+torchvision==0.29.2+cu132
+numpy==2.5.5
+pillow==13.0.0
+timm==1.0.31
