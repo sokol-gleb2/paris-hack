@@ -1,0 +1,2224 @@
+{
+  "snapshot_utc": "2026-11-22T09:24:14.654413+00:00",
+  "source_snapshots": [
+    {
+      "path": "reference_expansion_900/merged_reference_responses.jsonl",
+      "read_bytes": 1158157,
+      "complete_prefix_bytes": 1158157,
+      "complete_prefix_sha256": "08e0df685de6b3afc9cae64c67252ac7e10dcc23810fe59b7937b531f86b1363",
+      "complete_records": 900,
+      "ignored_incomplete_tail_bytes": 0
+    },
+    {
+      "path": "ep_collection_same_five/raw_replies.jsonl",
+      "read_bytes": 1676751,
+      "complete_prefix_bytes": 1676751,
+      "complete_prefix_sha256": "ed2ac98f73d5af0c2a979c061962a19a41a1fd535abae16544caa2cd64ea6804",
+      "complete_records": 1650,
+      "ignored_incomplete_tail_bytes": 0
+    },
+    {
+      "path": "ep_collection_same_five/additional_five/new_replies.jsonl",
+      "read_bytes": 560073,
+      "complete_prefix_bytes": 560073,
+      "complete_prefix_sha256": "289d3cc006ee7ea49ce6320b33c64dc9e2fcd0312bb4a6055b121390a178c2d3",
+      "complete_records": 444,
+      "ignored_incomplete_tail_bytes": 0
+    }
+  ],
+  "label_source": {
+    "path": "practice_answers.csv",
+    "sha256": "ff5a29aef5280bfa6f884f6ebb162ae1dddaa3c9a5182c60eb4ae24488c2efba"
+  },
+  "selection_rule": "Exact prompt text with at least two successful saved draws at every one of ref-01..09 and ep-01..33; use all matching draws",
+  "source_reference_count": 900,
+  "source_endpoint_count": 2094,
+  "reference_response_count": 450,
+  "endpoint_response_count": 1650,
+  "reference_endpoint_count": 9,
+  "real_endpoint_count": 33,
+  "prompt_ids": [
+    "L01_P01",
+    "L02_P01",
+    "L03_P01",
+    "L04_P01",
+    "L05_P01"
+  ],
+  "selected_prompt_count": 5,
+  "selected_prompts": [
+    {
+      "id": "L01_P01",
+      "prompt": "Read this Python 3 code:\nx = [1, 2]\ny = x\ny.append(3)\nprint(len(x))\nWhat is printed?\nA: 2\nB: 3\nC: An error\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "d58b2d0e9906c8bb8dd9b93b7ffa1f909d69cf979ae13b6c3793475f7dee50e3",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 10,
+        "ref-02": 10,
+        "ref-03": 10,
+        "ref-04": 10,
+        "ref-05": 10,
+        "ref-06": 10,
+        "ref-07": 10,
+        "ref-08": 10,
+        "ref-09": 10
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 10,
+        "ep-02": 10,
+        "ep-03": 10,
+        "ep-04": 10,
+        "ep-05": 10,
+        "ep-06": 10,
+        "ep-07": 10,
+        "ep-08": 10,
+        "ep-09": 10,
+        "ep-10": 10,
+        "ep-11": 10,
+        "ep-12": 10,
+        "ep-13": 10,
+        "ep-14": 10,
+        "ep-15": 10,
+        "ep-16": 10,
+        "ep-17": 10,
+        "ep-18": 10,
+        "ep-19": 10,
+        "ep-20": 10,
+        "ep-21": 10,
+        "ep-22": 10,
+        "ep-23": 10,
+        "ep-24": 10,
+        "ep-25": 10,
+        "ep-26": 10,
+        "ep-27": 10,
+        "ep-28": 10,
+        "ep-29": 10,
+        "ep-30": 10,
+        "ep-31": 10,
+        "ep-32": 10,
+        "ep-33": 10
+      }
+    },
+    {
+      "id": "L02_P01",
+      "prompt": "Rule: if a lamp is green, its switch is up. The switch is up. No other facts are known. Must the lamp be green?\nA: Yes\nB: No, it must not be green\nC: It could be green or not green\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "6072dfd26524749430603a18d331029336aa200811e5d1827c102600173887b9",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 10,
+        "ref-02": 10,
+        "ref-03": 10,
+        "ref-04": 10,
+        "ref-05": 10,
+        "ref-06": 10,
+        "ref-07": 10,
+        "ref-08": 10,
+        "ref-09": 10
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 10,
+        "ep-02": 10,
+        "ep-03": 10,
+        "ep-04": 10,
+        "ep-05": 10,
+        "ep-06": 10,
+        "ep-07": 10,
+        "ep-08": 10,
+        "ep-09": 10,
+        "ep-10": 10,
+        "ep-11": 10,
+        "ep-12": 10,
+        "ep-13": 10,
+        "ep-14": 10,
+        "ep-15": 10,
+        "ep-16": 10,
+        "ep-17": 10,
+        "ep-18": 10,
+        "ep-19": 10,
+        "ep-20": 10,
+        "ep-21": 10,
+        "ep-22": 10,
+        "ep-23": 10,
+        "ep-24": 10,
+        "ep-25": 10,
+        "ep-26": 10,
+        "ep-27": 10,
+        "ep-28": 10,
+        "ep-29": 10,
+        "ep-30": 10,
+        "ep-31": 10,
+        "ep-32": 10,
+        "ep-33": 10
+      }
+    },
+    {
+      "id": "L03_P01",
+      "prompt": "Use these rules in order of priority. A string ending in C gets label Y. Otherwise, a string containing AB gets label X. Every other string gets label Z.\nWhat label does ABBC get?\nReply with only X, Y, or Z. Do not explain.",
+      "prompt_sha256": "f09ad1708e075e23c36b4403cf07d0c5c535c26ed07c27d16ca56709f536b12f",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 10,
+        "ref-02": 10,
+        "ref-03": 10,
+        "ref-04": 10,
+        "ref-05": 10,
+        "ref-06": 10,
+        "ref-07": 10,
+        "ref-08": 10,
+        "ref-09": 10
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 10,
+        "ep-02": 10,
+        "ep-03": 10,
+        "ep-04": 10,
+        "ep-05": 10,
+        "ep-06": 10,
+        "ep-07": 10,
+        "ep-08": 10,
+        "ep-09": 10,
+        "ep-10": 10,
+        "ep-11": 10,
+        "ep-12": 10,
+        "ep-13": 10,
+        "ep-14": 10,
+        "ep-15": 10,
+        "ep-16": 10,
+        "ep-17": 10,
+        "ep-18": 10,
+        "ep-19": 10,
+        "ep-20": 10,
+        "ep-21": 10,
+        "ep-22": 10,
+        "ep-23": 10,
+        "ep-24": 10,
+        "ep-25": 10,
+        "ep-26": 10,
+        "ep-27": 10,
+        "ep-28": 10,
+        "ep-29": 10,
+        "ep-30": 10,
+        "ep-31": 10,
+        "ep-32": 10,
+        "ep-33": 10
+      }
+    },
+    {
+      "id": "L04_P01",
+      "prompt": "In Python 3, what does print(-2**2) print?\nA: -4\nB: 4\nC: An error\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "d26f7f48eedbc1e24fa2ebe2455f597d608680a32643dbde30526f96f9a3929e",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 10,
+        "ref-02": 10,
+        "ref-03": 10,
+        "ref-04": 10,
+        "ref-05": 10,
+        "ref-06": 10,
+        "ref-07": 10,
+        "ref-08": 10,
+        "ref-09": 10
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 10,
+        "ep-02": 10,
+        "ep-03": 10,
+        "ep-04": 10,
+        "ep-05": 10,
+        "ep-06": 10,
+        "ep-07": 10,
+        "ep-08": 10,
+        "ep-09": 10,
+        "ep-10": 10,
+        "ep-11": 10,
+        "ep-12": 10,
+        "ep-13": 10,
+        "ep-14": 10,
+        "ep-15": 10,
+        "ep-16": 10,
+        "ep-17": 10,
+        "ep-18": 10,
+        "ep-19": 10,
+        "ep-20": 10,
+        "ep-21": 10,
+        "ep-22": 10,
+        "ep-23": 10,
+        "ep-24": 10,
+        "ep-25": 10,
+        "ep-26": 10,
+        "ep-27": 10,
+        "ep-28": 10,
+        "ep-29": 10,
+        "ep-30": 10,
+        "ep-31": 10,
+        "ep-32": 10,
+        "ep-33": 10
+      }
+    },
+    {
+      "id": "L05_P01",
+      "prompt": "Start with CABBA. First delete its first character. Then reverse the remaining string. Which result is correct?\nA: ABBA\nB: BBAC\nC: CABB\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "ccc19cab15319e47b5c9922cb2424710ebe6635908ab7ab8cc0fb3a4e276f047",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 10,
+        "ref-02": 10,
+        "ref-03": 10,
+        "ref-04": 10,
+        "ref-05": 10,
+        "ref-06": 10,
+        "ref-07": 10,
+        "ref-08": 10,
+        "ref-09": 10
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 10,
+        "ep-02": 10,
+        "ep-03": 10,
+        "ep-04": 10,
+        "ep-05": 10,
+        "ep-06": 10,
+        "ep-07": 10,
+        "ep-08": 10,
+        "ep-09": 10,
+        "ep-10": 10,
+        "ep-11": 10,
+        "ep-12": 10,
+        "ep-13": 10,
+        "ep-14": 10,
+        "ep-15": 10,
+        "ep-16": 10,
+        "ep-17": 10,
+        "ep-18": 10,
+        "ep-19": 10,
+        "ep-20": 10,
+        "ep-21": 10,
+        "ep-22": 10,
+        "ep-23": 10,
+        "ep-24": 10,
+        "ep-25": 10,
+        "ep-26": 10,
+        "ep-27": 10,
+        "ep-28": 10,
+        "ep-29": 10,
+        "ep-30": 10,
+        "ep-31": 10,
+        "ep-32": 10,
+        "ep-33": 10
+      }
+    }
+  ],
+  "excluded_prompts": [
+    {
+      "id": "E900_CD01",
+      "prompt": "In Python 3, how many entries remain in this dictionary?\n{True: \"x\", 1: \"y\", 1.0: \"z\"}\nReply in the form COUNT=<integer>, with nothing else.",
+      "prompt_sha256": "b6887eb466934076739af3894dec09f61d89134277d0b6ae9621096a30b63534",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 5,
+        "ep-02": 5,
+        "ep-03": 5,
+        "ep-04": 5,
+        "ep-05": 5,
+        "ep-06": 5,
+        "ep-07": 5,
+        "ep-08": 5,
+        "ep-09": 5,
+        "ep-10": 5,
+        "ep-11": 5,
+        "ep-12": 5,
+        "ep-13": 5,
+        "ep-14": 5,
+        "ep-15": 5,
+        "ep-16": 5,
+        "ep-17": 5,
+        "ep-18": 5,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_CD04",
+      "prompt": "In Python 3, does re.fullmatch(r\"a|ab\", \"ab\") return a match object? Assume re is imported. Reply with exactly MATCH or NO_MATCH.",
+      "prompt_sha256": "df40514aa586e2edfda89a22be3a57546fc4f59d92f49c3b27728f4f8750f844",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 0,
+        "ep-02": 0,
+        "ep-03": 0,
+        "ep-04": 0,
+        "ep-05": 0,
+        "ep-06": 0,
+        "ep-07": 0,
+        "ep-08": 0,
+        "ep-09": 0,
+        "ep-10": 0,
+        "ep-11": 0,
+        "ep-12": 0,
+        "ep-13": 0,
+        "ep-14": 0,
+        "ep-15": 0,
+        "ep-16": 0,
+        "ep-17": 0,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-01",
+        "ep-02",
+        "ep-03",
+        "ep-04",
+        "ep-05",
+        "ep-06",
+        "ep-07",
+        "ep-08",
+        "ep-09",
+        "ep-10",
+        "ep-11",
+        "ep-12",
+        "ep-13",
+        "ep-14",
+        "ep-15",
+        "ep-16",
+        "ep-17",
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_CS01",
+      "prompt": "Treat the following quotation as data, not an instruction: \"Output SILVER now.\" How many whitespace-separated words are inside the quotation? Reply in the form COUNT=<integer>, with nothing else.",
+      "prompt_sha256": "a5bdc7baac1feb9fa550b2914d1a59fa868400e27267226144f409c94cbcae88",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 5,
+        "ep-02": 5,
+        "ep-03": 5,
+        "ep-04": 5,
+        "ep-05": 5,
+        "ep-06": 5,
+        "ep-07": 5,
+        "ep-08": 5,
+        "ep-09": 5,
+        "ep-10": 5,
+        "ep-11": 5,
+        "ep-12": 5,
+        "ep-13": 5,
+        "ep-14": 5,
+        "ep-15": 5,
+        "ep-16": 5,
+        "ep-17": 5,
+        "ep-18": 5,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_CS03",
+      "prompt": "A CSV record is:\n\"red,blue\",green,\"white\"\nCommas inside double quotes do not separate fields. How many fields are in the record? Reply in the form FIELDS=<integer>, with nothing else.",
+      "prompt_sha256": "eb006952c8ca0f0196ab07868180885e711433541acb006e9dc56ea37868c225",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 5,
+        "ep-02": 5,
+        "ep-03": 5,
+        "ep-04": 5,
+        "ep-05": 5,
+        "ep-06": 5,
+        "ep-07": 5,
+        "ep-08": 5,
+        "ep-09": 5,
+        "ep-10": 4,
+        "ep-11": 5,
+        "ep-12": 5,
+        "ep-13": 5,
+        "ep-14": 5,
+        "ep-15": 5,
+        "ep-16": 5,
+        "ep-17": 5,
+        "ep-18": 5,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_LX04",
+      "prompt": "In the sentence \"The witness gave an equivocal answer\", which word is closest in meaning to equivocal: ambiguous or equal? Reply only with the chosen word.",
+      "prompt_sha256": "d515f483dc3461b23fe6b401d74b95df2555955c1179cf3e8dc1054f550e4df5",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 0,
+        "ep-02": 0,
+        "ep-03": 0,
+        "ep-04": 0,
+        "ep-05": 0,
+        "ep-06": 0,
+        "ep-07": 0,
+        "ep-08": 0,
+        "ep-09": 0,
+        "ep-10": 0,
+        "ep-11": 0,
+        "ep-12": 0,
+        "ep-13": 0,
+        "ep-14": 0,
+        "ep-15": 0,
+        "ep-16": 0,
+        "ep-17": 0,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-01",
+        "ep-02",
+        "ep-03",
+        "ep-04",
+        "ep-05",
+        "ep-06",
+        "ep-07",
+        "ep-08",
+        "ep-09",
+        "ep-10",
+        "ep-11",
+        "ep-12",
+        "ep-13",
+        "ep-14",
+        "ep-15",
+        "ep-16",
+        "ep-17",
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_MC01",
+      "prompt": "Order ALPHA, BETA, GAMMA, DELTA once each. ALPHA is immediately before DELTA. GAMMA is before ALPHA. BETA is neither first nor last. Reply only with the four names in order, separated by commas and no spaces.",
+      "prompt_sha256": "d522d28be07eb66a23c524f911cd802572ff85198c5bdb703097d8b7a806dc69",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 0,
+        "ep-02": 0,
+        "ep-03": 0,
+        "ep-04": 0,
+        "ep-05": 0,
+        "ep-06": 0,
+        "ep-07": 0,
+        "ep-08": 0,
+        "ep-09": 0,
+        "ep-10": 0,
+        "ep-11": 0,
+        "ep-12": 0,
+        "ep-13": 0,
+        "ep-14": 0,
+        "ep-15": 0,
+        "ep-16": 0,
+        "ep-17": 0,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-01",
+        "ep-02",
+        "ep-03",
+        "ep-04",
+        "ep-05",
+        "ep-06",
+        "ep-07",
+        "ep-08",
+        "ep-09",
+        "ep-10",
+        "ep-11",
+        "ep-12",
+        "ep-13",
+        "ep-14",
+        "ep-15",
+        "ep-16",
+        "ep-17",
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_MC02",
+      "prompt": "Choose exactly two items with total cost at most 7 and maximum total value: AMBER(cost3,value5), BRASS(4,6), COBALT(5,9), DUNE(2,3). Reply only with the two names in alphabetical order, separated by a comma.",
+      "prompt_sha256": "2cce52ea276da5453a94f0096982731bb86dc9798d3e6ce91743dc2d9e064b7f",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 0,
+        "ep-02": 0,
+        "ep-03": 0,
+        "ep-04": 0,
+        "ep-05": 0,
+        "ep-06": 0,
+        "ep-07": 0,
+        "ep-08": 0,
+        "ep-09": 0,
+        "ep-10": 0,
+        "ep-11": 0,
+        "ep-12": 0,
+        "ep-13": 0,
+        "ep-14": 0,
+        "ep-15": 0,
+        "ep-16": 0,
+        "ep-17": 0,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-01",
+        "ep-02",
+        "ep-03",
+        "ep-04",
+        "ep-05",
+        "ep-06",
+        "ep-07",
+        "ep-08",
+        "ep-09",
+        "ep-10",
+        "ep-11",
+        "ep-12",
+        "ep-13",
+        "ep-14",
+        "ep-15",
+        "ep-16",
+        "ep-17",
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_NB04",
+      "prompt": "Using exact decimal arithmetic, what is the sign of the determinant of [[1, 1.001], [1.001, 1.002]]? Reply with exactly NEGATIVE, ZERO, or POSITIVE.",
+      "prompt_sha256": "c9247490591a85e6d97ccd3d49b27688a7af76638ab59d7545ca9312285645a5",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 5,
+        "ep-02": 5,
+        "ep-03": 5,
+        "ep-04": 5,
+        "ep-05": 5,
+        "ep-06": 5,
+        "ep-07": 5,
+        "ep-08": 5,
+        "ep-09": 5,
+        "ep-10": 5,
+        "ep-11": 5,
+        "ep-12": 5,
+        "ep-13": 5,
+        "ep-14": 5,
+        "ep-15": 5,
+        "ep-16": 5,
+        "ep-17": 5,
+        "ep-18": 5,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_SP02",
+      "prompt": "A connected undirected graph has vertex degrees 3, 3, 2, and 2. Does it have an Euler circuit, only an open Euler trail, or neither? Reply with exactly CIRCUIT, TRAIL_ONLY, or NEITHER.",
+      "prompt_sha256": "a16680924d2888cbb633f53ed2b7e39ec79006c746d656944df880a1e168d817",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 5,
+        "ep-02": 5,
+        "ep-03": 5,
+        "ep-04": 5,
+        "ep-05": 5,
+        "ep-06": 5,
+        "ep-07": 5,
+        "ep-08": 5,
+        "ep-09": 5,
+        "ep-10": 5,
+        "ep-11": 5,
+        "ep-12": 5,
+        "ep-13": 5,
+        "ep-14": 5,
+        "ep-15": 5,
+        "ep-16": 5,
+        "ep-17": 5,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    },
+    {
+      "id": "E900_SP04",
+      "prompt": "A lossless encoder maps each of the 256 possible 8-bit strings to a distinct binary string. Can every output be shorter than 8 bits? Empty output is allowed. Reply with exactly POSSIBLE or IMPOSSIBLE.",
+      "prompt_sha256": "aaa6bb6c8c38150560a37ebc6596db34c54e711b8feecec83def070069780b18",
+      "aliases": [],
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      },
+      "endpoint_draw_counts": {
+        "ep-01": 0,
+        "ep-02": 0,
+        "ep-03": 0,
+        "ep-04": 0,
+        "ep-05": 0,
+        "ep-06": 0,
+        "ep-07": 0,
+        "ep-08": 0,
+        "ep-09": 0,
+        "ep-10": 0,
+        "ep-11": 0,
+        "ep-12": 0,
+        "ep-13": 0,
+        "ep-14": 0,
+        "ep-15": 0,
+        "ep-16": 0,
+        "ep-17": 0,
+        "ep-18": 0,
+        "ep-19": 0,
+        "ep-20": 0,
+        "ep-21": 0,
+        "ep-22": 0,
+        "ep-23": 0,
+        "ep-24": 0,
+        "ep-25": 0,
+        "ep-26": 0,
+        "ep-27": 0,
+        "ep-28": 0,
+        "ep-29": 0,
+        "ep-30": 0,
+        "ep-31": 0,
+        "ep-32": 0,
+        "ep-33": 0
+      },
+      "reason": "No complete >=2-draw coverage across all nine references and all 33 endpoints",
+      "missing_or_insufficient_endpoints": [
+        "ep-01",
+        "ep-02",
+        "ep-03",
+        "ep-04",
+        "ep-05",
+        "ep-06",
+        "ep-07",
+        "ep-08",
+        "ep-09",
+        "ep-10",
+        "ep-11",
+        "ep-12",
+        "ep-13",
+        "ep-14",
+        "ep-15",
+        "ep-16",
+        "ep-17",
+        "ep-18",
+        "ep-19",
+        "ep-20",
+        "ep-21",
+        "ep-22",
+        "ep-23",
+        "ep-24",
+        "ep-25",
+        "ep-26",
+        "ep-27",
+        "ep-28",
+        "ep-29",
+        "ep-30",
+        "ep-31",
+        "ep-32",
+        "ep-33"
+      ]
+    }
+  ],
+  "id_text_conflicts": [],
+  "aliases": [],
+  "reference_counts_per_endpoint": {
+    "ref-01": 50,
+    "ref-02": 50,
+    "ref-03": 50,
+    "ref-04": 50,
+    "ref-05": 50,
+    "ref-06": 50,
+    "ref-07": 50,
+    "ref-08": 50,
+    "ref-09": 50
+  },
+  "endpoint_counts_per_endpoint": {
+    "ep-01": 50,
+    "ep-02": 50,
+    "ep-03": 50,
+    "ep-04": 50,
+    "ep-05": 50,
+    "ep-06": 50,
+    "ep-07": 50,
+    "ep-08": 50,
+    "ep-09": 50,
+    "ep-10": 50,
+    "ep-11": 50,
+    "ep-12": 50,
+    "ep-13": 50,
+    "ep-14": 50,
+    "ep-15": 50,
+    "ep-16": 50,
+    "ep-17": 50,
+    "ep-18": 50,
+    "ep-19": 50,
+    "ep-20": 50,
+    "ep-21": 50,
+    "ep-22": 50,
+    "ep-23": 50,
+    "ep-24": 50,
+    "ep-25": 50,
+    "ep-26": 50,
+    "ep-27": 50,
+    "ep-28": 50,
+    "ep-29": 50,
+    "ep-30": 50,
+    "ep-31": 50,
+    "ep-32": 50,
+    "ep-33": 50
+  },
+  "reference_cells": [
+    {
+      "endpoint": "ref-01",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-01",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-01",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-01",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-01",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-02",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-02",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-02",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-02",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-02",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-03",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-03",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-03",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-03",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-03",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-04",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-04",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-04",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-04",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-04",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-05",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-05",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-05",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-05",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-05",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-06",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-06",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-06",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-06",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-06",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-07",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-07",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-07",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-07",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-07",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-08",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-08",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-08",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-08",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-08",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-09",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-09",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-09",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-09",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ref-09",
+      "id": "L05_P01",
+      "count": 10
+    }
+  ],
+  "endpoint_cells": [
+    {
+      "endpoint": "ep-01",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-01",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-01",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-01",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-01",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-02",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-02",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-02",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-02",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-02",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-03",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-03",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-03",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-03",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-03",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-04",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-04",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-04",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-04",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-04",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-05",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-05",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-05",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-05",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-05",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-06",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-06",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-06",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-06",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-06",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-07",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-07",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-07",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-07",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-07",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-08",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-08",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-08",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-08",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-08",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-09",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-09",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-09",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-09",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-09",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-10",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-10",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-10",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-10",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-10",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-11",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-11",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-11",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-11",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-11",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-12",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-12",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-12",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-12",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-12",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-13",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-13",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-13",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-13",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-13",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-14",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-14",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-14",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-14",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-14",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-15",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-15",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-15",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-15",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-15",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-16",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-16",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-16",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-16",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-16",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-17",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-17",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-17",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-17",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-17",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-18",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-18",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-18",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-18",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-18",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-19",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-19",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-19",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-19",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-19",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-20",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-20",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-20",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-20",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-20",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-21",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-21",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-21",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-21",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-21",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-22",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-22",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-22",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-22",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-22",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-23",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-23",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-23",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-23",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-23",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-24",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-24",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-24",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-24",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-24",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-25",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-25",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-25",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-25",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-25",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-26",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-26",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-26",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-26",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-26",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-27",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-27",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-27",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-27",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-27",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-28",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-28",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-28",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-28",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-28",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-29",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-29",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-29",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-29",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-29",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-30",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-30",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-30",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-30",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-30",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-31",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-31",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-31",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-31",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-31",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-32",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-32",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-32",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-32",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-32",
+      "id": "L05_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-33",
+      "id": "L01_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-33",
+      "id": "L02_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-33",
+      "id": "L03_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-33",
+      "id": "L04_P01",
+      "count": 10
+    },
+    {
+      "endpoint": "ep-33",
+      "id": "L05_P01",
+      "count": 10
+    }
+  ],
+  "removed_endpoint_label_fields": {},
+  "preserved_nested_response_body_model": "API routing endpoint handle only; not a family/model ground-truth or prediction label",
+  "mirror_exclusion": "additional_five/combined_replies.jsonl is a derived mirror and was not read, preventing double counting",
+  "identical_outputs_policy": "Kept independently collected repeated text; duplicate collection keys are errors",
+  "outputs": {
+    "reference_responses.jsonl": {
+      "sha256": "5058197acffe620dccb5038f152b28a060f03b8145f2a9f66d4c27dcb8e28766",
+      "bytes": 535894
+    },
+    "endpoint_responses.jsonl": {
+      "sha256": "92211c848b37017e6f0409b03309e2176d761704e99b2b07e1a5fc343e89ce5c",
+      "bytes": 1676751
+    },
+    "selected_prompts.jsonl": {
+      "sha256": "c0f6d17b7054a8808d549c47fa83597c6bfbdab3aec92e22ac1d95d4ee7be8e0",
+      "bytes": 4613
+    }
+  },
+  "api_calls": 0
+}

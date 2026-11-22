@@ -1,0 +1,14 @@
+{
+  "archive": "../Extra/model_equality_archive_20261122_104141",
+  "archived_entries": 55,
+  "deleted_files": 0,
+  "recovery_job_stopped_with_explicit_authorization": true,
+  "offline_final_csv_byte_identical": true,
+  "final_csv_sha256": "a0077e19e42ef360cd90c9ebe6d4986de662d4a905494974a590a0af56a9e85f",
+  "all_protected_hashes_match": true,
+  "default_frozen_method": "Bigram",
+  "submission_path_correct": true,
+  "new_submissions": 0,
+  "new_endpoint_requests": 0,
+  "verification_outputs_archived": true
+}

@@ -1,0 +1,733 @@
+{
+  "created_utc": "2026-11-22T09:34:35.254782+00:00",
+  "method": "Frozen Bigram with complete linkage within K-means predicted families",
+  "model_cutoff": 0.02375075405834256,
+  "family_algorithm": "NumPy Lloyd K-means, K-means++ initialization, unscaled Euclidean score profiles",
+  "k": 5,
+  "seed": 0,
+  "restarts": 20,
+  "max_iterations": 300,
+  "feature_columns": [
+    "ep-01",
+    "ep-02",
+    "ep-03",
+    "ep-04",
+    "ep-05",
+    "ep-06",
+    "ep-07",
+    "ep-08",
+    "ep-09",
+    "ep-10",
+    "ep-11",
+    "ep-12",
+    "ep-13",
+    "ep-14",
+    "ep-15",
+    "ep-16",
+    "ep-17",
+    "ep-18",
+    "ep-19",
+    "ep-20",
+    "ep-21",
+    "ep-22",
+    "ep-23",
+    "ep-24",
+    "ep-25",
+    "ep-26",
+    "ep-27",
+    "ep-28",
+    "ep-29",
+    "ep-30",
+    "ep-31",
+    "ep-32",
+    "ep-33"
+  ],
+  "feature_definition": "Each endpoint is represented by its33 signed Bigram MMD2 scores to all endpoints; symmetric matrix, diagonal0; no clipping/scaling/MDS.",
+  "family_labels": "A-E arbitrary IDs ordered by smallest member endpoint, not known family names.",
+  "centers": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2133333333333333,
+      0.0,
+      0.0,
+      0.0,
+      0.23645422476710845,
+      0.16000000000000003,
+      0.22196804018480912,
+      0.0,
+      0.21333333333333335,
+      0.0,
+      0.26590412055442764,
+      0.2208569609225056,
+      0.0,
+      0.0,
+      0.18406317138832493,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.12552592058531611,
+      0.0,
+      0.3067450595087171,
+      0.0,
+      0.1741277574485679,
+      0.0,
+      0.0
+    ],
+    [
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.0191499843079341,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.005941517365571423,
+      0.03539542902291272,
+      -0.001419378182815648,
+      0.22864166884925294,
+      -0.0013897459311678453,
+      0.22864166884925294,
+      0.0005310703035394771,
+      0.01989728269897524,
+      0.22864166884925294,
+      0.22864166884925294,
+      -0.0021712937619082183,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.22864166884925294,
+      0.036511500052614825,
+      0.22864166884925294,
+      0.11325504433804728,
+      0.22864166884925294,
+      0.0008418130543063678,
+      0.22864166884925294,
+      0.22864166884925294
+    ],
+    [
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.006063642945630936,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.003765548146284555,
+      0.005545351744484333,
+      -0.00462249248582447,
+      0.17273030961229763,
+      0.007654510529854292,
+      0.17273030961229763,
+      0.017838465586199403,
+      0.03743222190847701,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.0011338184175772538,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.17273030961229763,
+      0.0038704792913744745,
+      0.17273030961229763,
+      0.13556775864805032,
+      0.17273030961229763,
+      -0.0002583745971600695,
+      0.17273030961229763,
+      0.17273030961229763
+    ],
+    [
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.018859253918649517,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.03026778164043529,
+      -0.0056529570716398895,
+      0.02056873986684247,
+      0.1255259205853162,
+      0.03839323889921144,
+      0.1255259205853162,
+      0.05945277095634133,
+      0.051527215034208894,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.01279069944719482,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.1255259205853162,
+      0.0,
+      0.1255259205853162,
+      0.1587831963095855,
+      0.1255259205853162,
+      0.004473695498568493,
+      0.1255259205853162,
+      0.1255259205853162
+    ],
+    [
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.19718902558207363,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.0872687217857431,
+      0.16591894505613197,
+      0.12475708609691483,
+      0.30674505950871706,
+      0.09549232641178533,
+      0.30674505950871706,
+      0.09206212531955967,
+      0.08276098083220718,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.0891873394840805,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.30674505950871706,
+      0.1587831963095855,
+      0.30674505950871706,
+      0.0,
+      0.30674505950871706,
+      0.1515969914039385,
+      0.30674505950871706,
+      0.30674505950871706
+    ]
+  ],
+  "restart_results": [
+    {
+      "restart": 0,
+      "inertia": 0.08996140587160771,
+      "iterations": 2
+    },
+    {
+      "restart": 1,
+      "inertia": 0.08685923428340364,
+      "iterations": 2
+    },
+    {
+      "restart": 2,
+      "inertia": 0.10691885065449784,
+      "iterations": 2
+    },
+    {
+      "restart": 3,
+      "inertia": 0.08685923428340364,
+      "iterations": 2
+    },
+    {
+      "restart": 4,
+      "inertia": 0.0875875756823632,
+      "iterations": 2
+    },
+    {
+      "restart": 5,
+      "inertia": 0.08537370166609921,
+      "iterations": 2
+    },
+    {
+      "restart": 6,
+      "inertia": 0.10476044687889018,
+      "iterations": 2
+    },
+    {
+      "restart": 7,
+      "inertia": 0.09451611009039956,
+      "iterations": 2
+    },
+    {
+      "restart": 8,
+      "inertia": 0.08685923428340364,
+      "iterations": 2
+    },
+    {
+      "restart": 9,
+      "inertia": 0.10476044687889018,
+      "iterations": 2
+    },
+    {
+      "restart": 10,
+      "inertia": 0.08518116206657914,
+      "iterations": 2
+    },
+    {
+      "restart": 11,
+      "inertia": 0.09780224942274116,
+      "iterations": 3
+    },
+    {
+      "restart": 12,
+      "inertia": 0.08518116206657914,
+      "iterations": 2
+    },
+    {
+      "restart": 13,
+      "inertia": 0.1361309291419054,
+      "iterations": 3
+    },
+    {
+      "restart": 14,
+      "inertia": 0.08537370166609921,
+      "iterations": 2
+    },
+    {
+      "restart": 15,
+      "inertia": 0.08537370166609921,
+      "iterations": 2
+    },
+    {
+      "restart": 16,
+      "inertia": 0.08905990515714474,
+      "iterations": 3
+    },
+    {
+      "restart": 17,
+      "inertia": 0.08685923428340364,
+      "iterations": 2
+    },
+    {
+      "restart": 18,
+      "inertia": 0.09451611009039956,
+      "iterations": 2
+    },
+    {
+      "restart": 19,
+      "inertia": 0.08537370166609921,
+      "iterations": 2
+    }
+  ],
+  "family_groups": {
+    "A": [
+      "ep-01",
+      "ep-02",
+      "ep-03",
+      "ep-04",
+      "ep-06",
+      "ep-07",
+      "ep-08",
+      "ep-12",
+      "ep-14",
+      "ep-17",
+      "ep-18",
+      "ep-20",
+      "ep-21",
+      "ep-22",
+      "ep-23",
+      "ep-24",
+      "ep-25",
+      "ep-26",
+      "ep-28",
+      "ep-30",
+      "ep-32",
+      "ep-33"
+    ],
+    "B": [
+      "ep-05",
+      "ep-09",
+      "ep-11",
+      "ep-13",
+      "ep-15",
+      "ep-16"
+    ],
+    "C": [
+      "ep-10",
+      "ep-19",
+      "ep-31"
+    ],
+    "D": [
+      "ep-27"
+    ],
+    "E": [
+      "ep-29"
+    ]
+  },
+  "model_groups": {
+    "ep-01": "A1",
+    "ep-02": "A1",
+    "ep-03": "A1",
+    "ep-04": "A1",
+    "ep-06": "A1",
+    "ep-07": "A1",
+    "ep-08": "A1",
+    "ep-12": "A1",
+    "ep-14": "A1",
+    "ep-17": "A1",
+    "ep-18": "A1",
+    "ep-20": "A1",
+    "ep-21": "A1",
+    "ep-22": "A1",
+    "ep-23": "A1",
+    "ep-24": "A1",
+    "ep-25": "A1",
+    "ep-26": "A1",
+    "ep-28": "A1",
+    "ep-30": "A1",
+    "ep-32": "A1",
+    "ep-33": "A1",
+    "ep-05": "B1",
+    "ep-09": "B2",
+    "ep-11": "B2",
+    "ep-13": "B2",
+    "ep-15": "B2",
+    "ep-16": "B3",
+    "ep-10": "C1",
+    "ep-19": "C1",
+    "ep-31": "C1",
+    "ep-27": "D1",
+    "ep-29": "E1"
+  },
+  "original_global_bigram_groups": {
+    "ep-01": "M01",
+    "ep-02": "M01",
+    "ep-03": "M01",
+    "ep-04": "M01",
+    "ep-06": "M01",
+    "ep-07": "M01",
+    "ep-08": "M01",
+    "ep-12": "M01",
+    "ep-14": "M01",
+    "ep-17": "M01",
+    "ep-18": "M01",
+    "ep-20": "M01",
+    "ep-21": "M01",
+    "ep-22": "M01",
+    "ep-23": "M01",
+    "ep-24": "M01",
+    "ep-25": "M01",
+    "ep-26": "M01",
+    "ep-28": "M01",
+    "ep-30": "M01",
+    "ep-32": "M01",
+    "ep-33": "M01",
+    "ep-05": "M02",
+    "ep-10": "M02",
+    "ep-11": "M02",
+    "ep-27": "M02",
+    "ep-31": "M02",
+    "ep-09": "M03",
+    "ep-13": "M03",
+    "ep-15": "M03",
+    "ep-19": "M03",
+    "ep-16": "M04",
+    "ep-29": "M05"
+  },
+  "changed_model_pairs": [
+    {
+      "endpoint_a": "ep-05",
+      "endpoint_b": "ep-10",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-05",
+      "endpoint_b": "ep-11",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-05",
+      "endpoint_b": "ep-27",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-05",
+      "endpoint_b": "ep-31",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-09",
+      "endpoint_b": "ep-11",
+      "original_same_model": false,
+      "final_same_model": true
+    },
+    {
+      "endpoint_a": "ep-09",
+      "endpoint_b": "ep-19",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-10",
+      "endpoint_b": "ep-11",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-10",
+      "endpoint_b": "ep-19",
+      "original_same_model": false,
+      "final_same_model": true
+    },
+    {
+      "endpoint_a": "ep-10",
+      "endpoint_b": "ep-27",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-11",
+      "endpoint_b": "ep-13",
+      "original_same_model": false,
+      "final_same_model": true
+    },
+    {
+      "endpoint_a": "ep-11",
+      "endpoint_b": "ep-15",
+      "original_same_model": false,
+      "final_same_model": true
+    },
+    {
+      "endpoint_a": "ep-11",
+      "endpoint_b": "ep-27",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-11",
+      "endpoint_b": "ep-31",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-13",
+      "endpoint_b": "ep-19",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-15",
+      "endpoint_b": "ep-19",
+      "original_same_model": true,
+      "final_same_model": false
+    },
+    {
+      "endpoint_a": "ep-19",
+      "endpoint_b": "ep-31",
+      "original_same_model": false,
+      "final_same_model": true
+    },
+    {
+      "endpoint_a": "ep-27",
+      "endpoint_b": "ep-31",
+      "original_same_model": true,
+      "final_same_model": false
+    }
+  ],
+  "source_hashes": {
+    "DATA\\endpoint_responses.jsonl": "92211c848b37017e6f0409b03309e2176d761704e99b2b07e1a5fc343e89ce5c",
+    "METHOD\\results\\bigram\\frozen_method.json": "a2eb79e1f9ccf6b346a2146db2ef6e8d8ff85fb61576824841a9340bdc8c4226",
+    "DATA\\reference_responses.jsonl": "5058197acffe620dccb5038f152b28a060f03b8145f2a9f66d4c27dcb8e28766"
+  },
+  "bigram_configuration": {
+    "schema_version": 2,
+    "created_utc": "2026-11-22T09:25:50.102551+00:00",
+    "method": "Bigram",
+    "recipe": {
+      "method": "Bigram",
+      "parameters": {},
+      "cutoff": 0.02375075405834256,
+      "candidate_cutoffs": [
+        -0.02585816518225821,
+        -0.016291697055638887,
+        -0.002523431074495642,
+        0.004177015073329816,
+        0.007134076002147457,
+        0.008520976738578004,
+        0.010080739332807856,
+        0.012385464332457533,
+        0.017975759054166658,
+        0.02375075405834256,
+        0.02571574892947933,
+        0.028953909043496436,
+        0.03311808813639104,
+        0.04026539585390794,
+        0.055536512278188024,
+        0.06535842290143229,
+        0.06622579929466327,
+        0.08668445810692557,
+        0.10970230693921243,
+        0.11463813909163723,
+        0.11871837465227916,
+        0.14261749112318078,
+        0.18215506647728513,
+        0.2016928840391271,
+        0.21310656527277916,
+        0.22274341317003193,
+        0.2355505616883015,
+        0.25400767970936367,
+        0.28192632884567415,
+        0.3880259550218181,
+        0.4910711532629666,
+        0.517760508814709,
+        0.5399892408750508,
+        0.576067969025716,
+        0.6094946216505233,
+        0.6246856925119249,
+        0.6279920050680975
+      ]
+    },
+    "prompts": [
+      {
+        "id": "L01_P01",
+        "prompt": "Read this Python 3 code:\nx = [1, 2]\ny = x\ny.append(3)\nprint(len(x))\nWhat is printed?\nA: 2\nB: 3\nC: An error\nReply with only A, B, or C. Do not explain.",
+        "prompt_sha256": "d58b2d0e9906c8bb8dd9b93b7ffa1f909d69cf979ae13b6c3793475f7dee50e3",
+        "reference_draw_counts": {
+          "ref-01": 10,
+          "ref-02": 10,
+          "ref-03": 10,
+          "ref-04": 10,
+          "ref-05": 10,
+          "ref-06": 10,
+          "ref-07": 10,
+          "ref-08": 10,
+          "ref-09": 10
+        }
+      },
+      {
+        "id": "L02_P01",
+        "prompt": "Rule: if a lamp is green, its switch is up. The switch is up. No other facts are known. Must the lamp be green?\nA: Yes\nB: No, it must not be green\nC: It could be green or not green\nReply with only A, B, or C. Do not explain.",
+        "prompt_sha256": "6072dfd26524749430603a18d331029336aa200811e5d1827c102600173887b9",
+        "reference_draw_counts": {
+          "ref-01": 10,
+          "ref-02": 10,
+          "ref-03": 10,
+          "ref-04": 10,
+          "ref-05": 10,
+          "ref-06": 10,
+          "ref-07": 10,
+          "ref-08": 10,
+          "ref-09": 10
+        }
+      },
+      {
+        "id": "L03_P01",
+        "prompt": "Use these rules in order of priority. A string ending in C gets label Y. Otherwise, a string containing AB gets label X. Every other string gets label Z.\nWhat label does ABBC get?\nReply with only X, Y, or Z. Do not explain.",
+        "prompt_sha256": "f09ad1708e075e23c36b4403cf07d0c5c535c26ed07c27d16ca56709f536b12f",
+        "reference_draw_counts": {
+          "ref-01": 10,
+          "ref-02": 10,
+          "ref-03": 10,
+          "ref-04": 10,
+          "ref-05": 10,
+          "ref-06": 10,
+          "ref-07": 10,
+          "ref-08": 10,
+          "ref-09": 10
+        }
+      },
+      {
+        "id": "L04_P01",
+        "prompt": "In Python 3, what does print(-2**2) print?\nA: -4\nB: 4\nC: An error\nReply with only A, B, or C. Do not explain.",
+        "prompt_sha256": "d26f7f48eedbc1e24fa2ebe2455f597d608680a32643dbde30526f96f9a3929e",
+        "reference_draw_counts": {
+          "ref-01": 10,
+          "ref-02": 10,
+          "ref-03": 10,
+          "ref-04": 10,
+          "ref-05": 10,
+          "ref-06": 10,
+          "ref-07": 10,
+          "ref-08": 10,
+          "ref-09": 10
+        }
+      },
+      {
+        "id": "L05_P01",
+        "prompt": "Start with CABBA. First delete its first character. Then reverse the remaining string. Which result is correct?\nA: ABBA\nB: BBAC\nC: CABB\nReply with only A, B, or C. Do not explain.",
+        "prompt_sha256": "ccc19cab15319e47b5c9922cb2424710ebe6635908ab7ab8cc0fb3a4e276f047",
+        "reference_draw_counts": {
+          "ref-01": 10,
+          "ref-02": 10,
+          "ref-03": 10,
+          "ref-04": 10,
+          "ref-05": 10,
+          "ref-06": 10,
+          "ref-07": 10,
+          "ref-08": 10,
+          "ref-09": 10
+        }
+      }
+    ],
+    "preprocessing": {
+      "unicode_prefix_length": 200,
+      "normalization": "none",
+      "hamming_padding": -1
+    },
+    "kernels": {
+      "Hamming": "positional agreement divided by200 with -1 padding",
+      "Bigram": "overlapping2-character counts, L2 normalized, dot product, zero when short",
+      "Trigram": "overlapping3-character counts, L2 normalized, dot product, zero when short",
+      "Structural": "phi=[length,newlines,whitespace,ASCII punctuation]/200 on prefix; kernel dot/4"
+    },
+    "mixture_weights": {
+      "Hamming + bigram": {
+        "Hamming": 0.5,
+        "Bigram": 0.5
+      },
+      "Bigram + trigram": {
+        "Bigram": 0.5,
+        "Trigram": 0.5
+      }
+    },
+    "aggregation": "equal prompt weights, actual per-cell sample counts, signed unbiased squared MMD",
+    "minimum_draws_per_cell": 2,
+    "clustering": {
+      "method": "complete",
+      "merge_rule": "maximum cross-pair score <= cutoff",
+      "tie_break": "lexical sorted endpoint cluster tuples",
+      "cutoff": 0.02375075405834256,
+      "number_of_groups": "unconstrained"
+    },
+    "source_code_sha256": {
+      "inference.py": "5260e66e57125e586f90975650771b64fb95861fd940b75cb81ebc86aca36c7e",
+      "score_endpoints.py": "8704ba88475e8d93964462b87456ec420f38cace17753089f1f5f85f3f5a0a46",
+      "vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/final_900_benchmark/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/final_900_benchmark/core.py": "f04333144feed952aed93bd617e375ffe7ecc60c46f0b173528ae12d49df8894",
+      "vendor/identity_features/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/identity_features/scoring.py": "698e4398f3dce227ebc3404d0be021767f114177ad2a40d3c90a68639c7d27e6",
+      "vendor/identity_rule_comparison/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/identity_rule_comparison/engine.py": "6d5f0124feb2203261fbf98cd3478719705ebfc53c3f58d8aac8eef0ee495be8",
+      "vendor/kernel_comparison/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/kernel_comparison/engine.py": "48127d87076cdfe1e639239c17e502b297280efc6a56c4900b6a2915c361cd1f",
+      "vendor/looop/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendor/looop/hamming.py": "3794022af1d6e4614932c1b406a26d75da3ed3a4a00c7d38f06ac30318ba31cb"
+    },
+    "family_policy": "Pending; model-only group labels, no validated family inference.",
+    "stage": "full reference fit",
+    "selection": "Mean swapped-held-out-draw clipped MCC, worst fold MCC, full-fit MCC, full-fit AUROC, simpler METHODS order; rounded12digits. Exploratory selection, not an independent final test.",
+    "cutoff_selection": "Training-only organizer clipped MCC, then accuracy, then smallest candidate cutoff. Candidates: nextafter(min,-inf), adjacent midpoints, maximum.",
+    "network_requests": 0
+  },
+  "family_validation": "Unvalidated: k=5 is user prescribed; references provide only familyP; no real ground truth.",
+  "requests": 0
+}

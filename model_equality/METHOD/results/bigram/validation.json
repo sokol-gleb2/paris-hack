@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "inference_variants": 5,
+  "maximum_pair_score_difference": 0.0,
+  "pair_count": 36,
+  "same_partition": true,
+  "row_order_invariant": true,
+  "ground_truth_fields_unnecessary": true,
+  "poisoned_labels_ignored": true,
+  "exact_text_aliases_supported": true,
+  "new_endpoint_ids_supported": true,
+  "reference_mcc": 0.7211102550927979,
+  "confusion_matrix": {
+    "tp": 6,
+    "fp": 0,
+    "tn": 26,
+    "fn": 4
+  },
+  "guards": {
+    "duplicate_draw": true,
+    "missing_cell": true,
+    "one_draw_cell": true,
+    "prompt_mismatch": true,
+    "boolean_repeat": true,
+    "inconsistent_cutoff": true,
+    "unsupported_preprocessing": true,
+    "source_hash_mismatch": true,
+    "id_reused_with_different_text": true
+  },
+  "requests": 0
+}

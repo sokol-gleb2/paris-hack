@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "reference_responses": 450,
+  "endpoint_responses": 1650,
+  "selected_prompts": 5,
+  "endpoint_prompt_cells": 210,
+  "draws_per_cell": 10,
+  "original_fields_preserved": true,
+  "reference_labels_match_practice_answers": true,
+  "endpoint_ground_truth_or_prediction_labels_present": false,
+  "nested_response_body_model_is_endpoint_routing_metadata": true,
+  "exact_text_shared_coverage": true,
+  "unique_collection_records": true,
+  "identical_text_draws_retained": true,
+  "source_prefix_and_output_hashes_verified": true,
+  "api_calls": 0
+}

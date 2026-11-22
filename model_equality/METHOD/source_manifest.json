@@ -1,0 +1,66 @@
+{
+  "policy": "Copied source functions only, no old scores, cutoffs, fitted models or datasets.",
+  "files": [
+    {
+      "source": "final_900_benchmark/core.py",
+      "source_sha256": "e5aa4a206d670c56bf32782cd03fbf03b52146d627567633e0e41a48d9554369",
+      "destination": "vendor/final_900_benchmark/core.py",
+      "destination_sha256": "f04333144feed952aed93bd617e375ffe7ecc60c46f0b173528ae12d49df8894",
+      "changes": [
+        "Dependency imports refer to this package vendor namespace."
+      ]
+    },
+    {
+      "source": "identity_rule_comparison/engine.py",
+      "source_sha256": "7baf1f1dc3bfc7f5bb9517f5622c46ed9ebd63fb6d9ff24a1d0bea558579284c",
+      "destination": "vendor/identity_rule_comparison/engine.py",
+      "destination_sha256": "6d5f0124feb2203261fbf98cd3478719705ebfc53c3f58d8aac8eef0ee495be8",
+      "changes": [
+        "Dependency imports refer to this package vendor namespace."
+      ]
+    },
+    {
+      "source": "kernel_comparison/engine.py",
+      "source_sha256": "41a4fdcb6297bd1fe6de529cc45eb44477e41099e30914b09bd2ce79637a9a84",
+      "destination": "vendor/kernel_comparison/engine.py",
+      "destination_sha256": "48127d87076cdfe1e639239c17e502b297280efc6a56c4900b6a2915c361cd1f",
+      "changes": [
+        "Removed unrelated historical experiment runner; retained kernels, estimator, AUROC and sanity checks.",
+        "Dependency imports refer to this package vendor namespace."
+      ]
+    },
+    {
+      "source": "looop/hamming.py",
+      "source_sha256": "8c3877b4d9dcae35accee9ad610d53dfc67192b0e7c427bc419eb007d6b8764a",
+      "destination": "vendor/looop/hamming.py",
+      "destination_sha256": "3794022af1d6e4614932c1b406a26d75da3ed3a4a00c7d38f06ac30318ba31cb",
+      "changes": [
+        "Removed unrelated historical three-endpoint iteration runner; retained Hamming and clustering/calibration functions.",
+        "Dependency imports refer to this package vendor namespace."
+      ]
+    },
+    {
+      "source": "identity_features/scoring.py",
+      "source_sha256": "1bb78c0f211b56c2de2ee128ed912564fbd2e558688cc1ffd9fadf6d4057adbb",
+      "destination": "vendor/identity_features/scoring.py",
+      "destination_sha256": "698e4398f3dce227ebc3404d0be021767f114177ad2a40d3c90a68639c7d27e6",
+      "changes": [
+        "Dependency imports refer to this package vendor namespace."
+      ]
+    },
+    {
+      "source": "benchmark_original5/inference.py",
+      "source_sha256": "d154f3b5dc2befab025f862b8864d536bd2e90791e99d81f926b88b30e6301ef",
+      "destination": "inference.py",
+      "destination_sha256": "5260e66e57125e586f90975650771b64fb95861fd940b75cb81ebc86aca36c7e",
+      "changes": [
+        "Portable METHOD-root paths and copied vendor imports; output confinement to METHOD; same frozen schema2 and inference API."
+      ]
+    }
+  ],
+  "entrypoint": {
+    "destination": "score_endpoints.py",
+    "sha256": "8704ba88475e8d93964462b87456ec420f38cace17753089f1f5f85f3f5a0a46",
+    "purpose": "Offline CLI using portable inference implementation."
+  }
+}

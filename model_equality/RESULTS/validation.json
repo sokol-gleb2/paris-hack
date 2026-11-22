@@ -1,0 +1,15 @@
+{
+  "records": 1650,
+  "endpoints": 33,
+  "pairs": 528,
+  "families": 5,
+  "models": 7,
+  "baseline_max_score_difference": 0.0,
+  "row_order_invariant": true,
+  "seed_reproducible": true,
+  "centroid_means_and_nearest_assignments_checked": true,
+  "protected_inputs_unchanged": true,
+  "hierarchy_valid": true,
+  "final_csv_sha256": "a0077e19e42ef360cd90c9ebe6d4986de662d4a905494974a590a0af56a9e85f",
+  "requests": 0
+}

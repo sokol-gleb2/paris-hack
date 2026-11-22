@@ -1,0 +1,47 @@
+{
+  "baseline_k5_score": 0.05,
+  "k2": {
+    "started_utc": "2026-11-22T09:44:58.152117+00:00",
+    "k": 2,
+    "csv": "RESULTS\\k2\\final_predictions.csv",
+    "csv_sha256": "3aea8614564fe2aafda7d10faee54cb92a7704cac0ff1b857fc41584761c98f0",
+    "rows": 33,
+    "families": 2,
+    "models": 5,
+    "submission_script": "submission.py (SUBMISSION_FILE overridden for this invocation only)",
+    "attempts": 1,
+    "status": "rejected_rate_limit",
+    "completed_utc": "2026-11-22T09:44:58.210919+00:00",
+    "process_exit_code": 1,
+    "public_split_score": null,
+    "portal_output": "Submitting final_predictions.csv to 33-model-equality. Scoring can take a few minutes...\nRejected (HTTP 429): You submitted too recently (last submission successful). Wait 1273 seconds before sending another submission.\n",
+    "csv_unchanged": true,
+    "http_status": 429,
+    "retry_after_seconds": 1273,
+    "earliest_next_attempt_utc": "2026-11-22T10:06:11.210919+00:00"
+  },
+  "k3": {
+    "status": "prepared_not_submitted_due_to_active_portal_rate_limit",
+    "csv": "RESULTS/k3/final_predictions.csv"
+  },
+  "automatic_retry_scheduled": false,
+  "k2_latest": {
+    "started_utc": "2026-11-22T10:08:06.238101+00:00",
+    "k": 2,
+    "csv": "RESULTS\\k2\\final_predictions.csv",
+    "csv_sha256": "3aea8614564fe2aafda7d10faee54cb92a7704cac0ff1b857fc41584761c98f0",
+    "rows": 33,
+    "families": 2,
+    "models": 5,
+    "submission_script": "submission.py (SUBMISSION_FILE overridden for this invocation only)",
+    "attempts": 1,
+    "status": "success",
+    "completed_utc": "2026-11-22T10:08:06.801283+00:00",
+    "process_exit_code": 0,
+    "public_split_score": 0.05,
+    "portal_output": "Submitting final_predictions.csv to 33-model-equality. Scoring can take a few minutes...\nScore (public split): 0.05\nSubmission accepted. Your previous best on this task still leads. Public-split score; final ranking uses the held out subset.\n",
+    "csv_unchanged": true
+  },
+  "k2_latest_receipt": "k2\\submission_retry_20261122T100806234087Z.json",
+  "k2_improves_on_reported_k5": false
+}

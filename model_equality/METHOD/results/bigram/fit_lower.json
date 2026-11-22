@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "created_utc": "2026-11-22T09:25:50.108839+00:00",
+  "method": "Bigram",
+  "recipe": {
+    "method": "Bigram",
+    "parameters": {},
+    "cutoff": 0.008317432067666369,
+    "candidate_cutoffs": [
+      -0.08886191238579051,
+      -0.07166893515028436,
+      -0.051446899779872796,
+      -0.0473797308963379,
+      -0.04037485273638563,
+      -0.03400031952060956,
+      -0.0315177326213325,
+      -0.026017323108091378,
+      -0.020241887612022932,
+      -0.017581316438018676,
+      -0.014751447077941869,
+      -0.010463110143227528,
+      -0.006148515271401573,
+      0.002250679690229468,
+      0.008317432067666369,
+      0.02063586059210106,
+      0.04039262004439413,
+      0.04841070136921623,
+      0.05706606099815637,
+      0.07076603040352084,
+      0.08197098447588005,
+      0.15509049579541534,
+      0.23387203578086604,
+      0.24954422898027484,
+      0.2614601254867004,
+      0.2753549225049359,
+      0.28331557731796164,
+      0.29128303398165545,
+      0.3101643342950883,
+      0.4229420432587335,
+      0.527760269364711,
+      0.534220840961465,
+      0.5514436663870746,
+      0.5765725665555295,
+      0.5934834908835545,
+      0.6161149687201009,
+      0.6314826634928156
+    ]
+  },
+  "prompts": [
+    {
+      "id": "L01_P01",
+      "prompt": "Read this Python 3 code:\nx = [1, 2]\ny = x\ny.append(3)\nprint(len(x))\nWhat is printed?\nA: 2\nB: 3\nC: An error\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "d58b2d0e9906c8bb8dd9b93b7ffa1f909d69cf979ae13b6c3793475f7dee50e3",
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      }
+    },
+    {
+      "id": "L02_P01",
+      "prompt": "Rule: if a lamp is green, its switch is up. The switch is up. No other facts are known. Must the lamp be green?\nA: Yes\nB: No, it must not be green\nC: It could be green or not green\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "6072dfd26524749430603a18d331029336aa200811e5d1827c102600173887b9",
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      }
+    },
+    {
+      "id": "L03_P01",
+      "prompt": "Use these rules in order of priority. A string ending in C gets label Y. Otherwise, a string containing AB gets label X. Every other string gets label Z.\nWhat label does ABBC get?\nReply with only X, Y, or Z. Do not explain.",
+      "prompt_sha256": "f09ad1708e075e23c36b4403cf07d0c5c535c26ed07c27d16ca56709f536b12f",
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      }
+    },
+    {
+      "id": "L04_P01",
+      "prompt": "In Python 3, what does print(-2**2) print?\nA: -4\nB: 4\nC: An error\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "d26f7f48eedbc1e24fa2ebe2455f597d608680a32643dbde30526f96f9a3929e",
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      }
+    },
+    {
+      "id": "L05_P01",
+      "prompt": "Start with CABBA. First delete its first character. Then reverse the remaining string. Which result is correct?\nA: ABBA\nB: BBAC\nC: CABB\nReply with only A, B, or C. Do not explain.",
+      "prompt_sha256": "ccc19cab15319e47b5c9922cb2424710ebe6635908ab7ab8cc0fb3a4e276f047",
+      "reference_draw_counts": {
+        "ref-01": 5,
+        "ref-02": 5,
+        "ref-03": 5,
+        "ref-04": 5,
+        "ref-05": 5,
+        "ref-06": 5,
+        "ref-07": 5,
+        "ref-08": 5,
+        "ref-09": 5
+      }
+    }
+  ],
+  "preprocessing": {
+    "unicode_prefix_length": 200,
+    "normalization": "none",
+    "hamming_padding": -1
+  },
+  "kernels": {
+    "Hamming": "positional agreement divided by200 with -1 padding",
+    "Bigram": "overlapping2-character counts, L2 normalized, dot product, zero when short",
+    "Trigram": "overlapping3-character counts, L2 normalized, dot product, zero when short",
+    "Structural": "phi=[length,newlines,whitespace,ASCII punctuation]/200 on prefix; kernel dot/4"
+  },
+  "mixture_weights": {
+    "Hamming + bigram": {
+      "Hamming": 0.5,
+      "Bigram": 0.5
+    },
+    "Bigram + trigram": {
+      "Bigram": 0.5,
+      "Trigram": 0.5
+    }
+  },
+  "aggregation": "equal prompt weights, actual per-cell sample counts, signed unbiased squared MMD",
+  "minimum_draws_per_cell": 2,
+  "clustering": {
+    "method": "complete",
+    "merge_rule": "maximum cross-pair score <= cutoff",
+    "tie_break": "lexical sorted endpoint cluster tuples",
+    "cutoff": 0.008317432067666369,
+    "number_of_groups": "unconstrained"
+  },
+  "source_code_sha256": {
+    "inference.py": "5260e66e57125e586f90975650771b64fb95861fd940b75cb81ebc86aca36c7e",
+    "score_endpoints.py": "8704ba88475e8d93964462b87456ec420f38cace17753089f1f5f85f3f5a0a46",
+    "vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/final_900_benchmark/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/final_900_benchmark/core.py": "f04333144feed952aed93bd617e375ffe7ecc60c46f0b173528ae12d49df8894",
+    "vendor/identity_features/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/identity_features/scoring.py": "698e4398f3dce227ebc3404d0be021767f114177ad2a40d3c90a68639c7d27e6",
+    "vendor/identity_rule_comparison/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/identity_rule_comparison/engine.py": "6d5f0124feb2203261fbf98cd3478719705ebfc53c3f58d8aac8eef0ee495be8",
+    "vendor/kernel_comparison/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/kernel_comparison/engine.py": "48127d87076cdfe1e639239c17e502b297280efc6a56c4900b6a2915c361cd1f",
+    "vendor/looop/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/looop/hamming.py": "3794022af1d6e4614932c1b406a26d75da3ed3a4a00c7d38f06ac30318ba31cb"
+  },
+  "family_policy": "Pending; model-only group labels, no validated family inference.",
+  "stage": "lower_to_upper training only",
+  "selection": "Mean swapped-held-out-draw clipped MCC, worst fold MCC, full-fit MCC, full-fit AUROC, simpler METHODS order; rounded12digits. Exploratory selection, not an independent final test.",
+  "cutoff_selection": "Training-only organizer clipped MCC, then accuracy, then smallest candidate cutoff. Candidates: nextafter(min,-inf), adjacent midpoints, maximum.",
+  "network_requests": 0
+}
