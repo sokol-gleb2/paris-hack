@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=unlearning-wildcard
+#SBATCH --job-name=unlearning-3905
 #SBATCH --account=training2666
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

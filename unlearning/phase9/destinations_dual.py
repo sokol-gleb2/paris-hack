@@ -1,7 +1,6 @@
-import numpy as np
 import torch
 from torch.nn import functional as F
-from phase9.destinations import conditional, logits, moments, prob, shuffle_indices
+from phase9.destinations import conditional, logits, moments, prob
 from phase9.destinations_prior import VIEWS
 
 
@@ -31,29 +30,18 @@ def fixed_concentration(q, target, y):
     return result
 
 
-def choices(teacher,parent,y,logprior,seed):
+def dual_target(teacher, parent, labels, log_prior):
+    """Preserve the parent's T2 source mass and T1 source loss in the distilled target."""
     p = prob(parent.double())
-    src = p.gather(1, y[:,None])
-    wrong = conditional(p,y)
-    ref = conditional(prob(teacher.double()+2*logprior[None,:]),y)
-    rng = np.random.default_rng(seed)
-    fake = conditional(prob(teacher.double()+2*logprior[rng.permutation(len(logprior))][None,:]),y)
-    perm = shuffle_indices(y.numpy(),seed+17)
-    proposed = .5*wrong+.5*ref
-    concentration=wrong.square().sum(1,keepdim=True)
-    q={
-        'raw':proposed,'dual':fixed_concentration(proposed,concentration,y),
-        'shuffled':fixed_concentration(.5*wrong+.5*ref[perm],concentration,y),
-        'permuted_prior':fixed_concentration(.5*wrong+.5*fake,concentration,y)}
-    output={'parent':p}
-    for k,v in q.items():
-        output[k]=((1-src)*v).scatter(1,y[:,None],src)
-        if k!='raw':
-            ce=F.cross_entropy(2*output[k].clamp_min(1.e-60).log(),y,reduction='none')
-            base=F.cross_entropy(parent.double(),y,reduction='none')
-            if (ce-base).abs().max() > 1.e-6:
-                raise ValueError('Dual target changed the exact source loss.')
-    return output
+    own = p.gather(1, labels[:, None])
+    other = conditional(p, labels)
+    adjusted = conditional(prob(teacher.double() + 2 * log_prior[None, :]), labels)
+    q = fixed_concentration(.5 * other + .5 * adjusted, other.square().sum(1, keepdim=True), labels)
+    target = ((1 - own) * q).scatter(1, labels[:, None], own)
+    loss = F.cross_entropy(2 * target.clamp_min(1.e-60).log(), labels, reduction="none")
+    if (loss - F.cross_entropy(parent.double(), labels, reduction="none")).abs().max() > 1.e-6:
+        raise ValueError("The target changed the source loss")
+    return target
 
 
 def train_student(cache,y,fit,base,high):

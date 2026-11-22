@@ -1,4 +1,4 @@
-"""Fit or recover the Task 3 wildcard checkpoint (public entry 3768)."""
+"""Fit or recover the Task 3 adaptive checkpoint (public entry 3905)."""
 import argparse
 import hashlib
 import os
@@ -10,14 +10,15 @@ ASSETS = Path(__file__).resolve().parent / "assets"
 MODEL_SHA = "485881a03ad064b5e6defc245ae3f45fd96714bf065ff96543a5eeca9f642571"
 IMAGES_SHA = "5b1d9deaf475db0905973aa028511ab35aebc33196412f5ef9ebbef09f1541c7"
 READOUT_SHA = "6dd838db325ec761d880d21794fb99a3b0e5239d3f320f7d4c5b736af90f49ae"
-PATCH_SHA = "23621ff3129efef330ababad3e6ba3af5a4b76e583fc8cc9412718713665d3aa"
-SCORED_SHA = "2be9bdf5e38b6c00be867f941bd51ad1462b2a73c96e8d4e7f56405c8b8bcacb"
+PATCH_SHA = "6ae9a7574ad2ba1222acdb210da0fadc4ed20df867bc46a5da9e5696370521ff"
+PREVIOUS_SHA = "2be9bdf5e38b6c00be867f941bd51ad1462b2a73c96e8d4e7f56405c8b8bcacb"
+SCORED_SHA = "cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b"
 
 
 def verify(path, expected):
     with path.open("rb") as source:
         actual = hashlib.file_digest(source, "sha256").hexdigest()
-    if actual != expected:
+    if actual not in (expected if isinstance(expected, tuple) else (expected,)):
         raise ValueError(f"{path}: expected SHA-256 {expected}, got {actual}")
 
 
@@ -26,7 +27,7 @@ def fit(model_path, images_path, stream):
     import numpy as np
     import torch
     import task_template
-    from phase9.wildcard_occlusion import unlearn
+    from adaptive import unlearn
 
     if not torch.cuda.is_available():
         raise RuntimeError("Fitting requires CUDA. Use --restore to recover the scored file on CPU.")
@@ -57,7 +58,8 @@ def main():
         verify(args.model, MODEL_SHA)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         if args.output.exists():
-            verify(args.output, SCORED_SHA)
+            # Migrate existing checkouts of our previous release after verifying the replacement.
+            verify(args.output, (PREVIOUS_SHA, SCORED_SHA))
         with tempfile.NamedTemporaryFile(dir=args.output.parent, delete=False) as stream:
             temporary = Path(stream.name)
         try:

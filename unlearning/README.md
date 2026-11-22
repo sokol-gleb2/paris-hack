@@ -1,38 +1,45 @@
-# Task 3 · Wildcard unlearning
+# Task 3 · Adaptive unlearning
 
-The wildcard is a 100-class ViT-B/16 for the Paris AI Championship. The organizers scored this checkpoint as public submission **3768**, with a public score of **0.1762**. The held-out score is unknown.
+**Team checkpoint for final testing: submission 3905**. The public scorer reported **0.17655230543752248**. The model is a 100-class ViT-B/16 with a classifier trained on an image-specific mixture of clean and occluded teacher predictions. Read the [architecture and reproduction report](docs/architecture_3905.pdf) for the training pipeline, equations, controls and measurements. The [verification record](docs/verification_3905.json) includes the original acceptance receipt, public leaderboard check and fresh A100 replay.
 
-## Recover the scored checkpoint
+## Recover the exact scored weights on CPU
 
-Place the organizer-supplied `model.pt` in this directory, or pass its path with `--model`. From this directory, run the following with Python 3.11+ and the Zstandard CLI. This path runs on CPU and needs no Python packages.
+From this directory, supply the official original model, Python 3.11+ and the Zstandard CLI. This path has no Python package dependencies.
 
 ```sh
-python3 code.py --restore
+python3 code.py --restore --model /path/to/model.pt
 python3 code.py --verify
 ```
 
-This writes the complete 343,628,063-byte PyTorch state dictionary to `output/submission.pt`. Git tracks a lossless Zstandard patch against the original model. The program verifies the base model, patch and resulting file. The scored checkpoint SHA-256 is `2be9bdf5e38b6c00be867f941bd51ad1462b2a73c96e8d4e7f56405c8b8bcacb`.
+The resulting `output/submission.pt` is a 343,628,063-byte plain PyTorch state dictionary. The SHA-256 is `cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b`. The compact patch in `assets/` recovers the complete file byte for byte. An existing output from our previous release, 3768, upgrades atomically after the replacement passes verification.
 
-## Reproduce the fit on JURECA
+## Reproduce training on JURECA
 
-Start in this directory with the task's shared `.venv/`, `model.pt` and `forget_images.npz`. Symlinks to the shared copies work. The reference environment used Python 3.12.15 and an NVIDIA A100. The dependency versions are in `requirements.txt`. For a fresh Linux CUDA environment, create a local virtual environment and install that file. Each machine supplies its own environment.
+In the task directory, activate the shared environment by making its `.venv/` available here. Place or link the organizer's `model.pt` and `forget_images.npz` here. For a fresh Linux environment, use Python 3.12 and the CUDA package versions in `requirements.txt`.
 
 ```sh
 mkdir -p output
 sbatch main.sh
 ```
 
-The job runs `code.py` in fitting mode and writes the same checkpoint. Logs are in `output/<job-id>.out` and `output/<job-id>.err`. To use inputs elsewhere, pass `--model /path/to/model.pt --images /path/to/forget_images.npz` after `main.sh`. The code checks the pinned output digest before installing the candidate.
+The job runs the adaptive fit on one A100. To use inputs outside the directory, pass `--model /path/to/model.pt --images /path/to/forget_images.npz` after `main.sh`. The program checks the SHA-256 before publishing the checkpoint. Slurm writes logs to `output/<job-id>.out` and `output/<job-id>.err`.
 
-## What is fitted
+## Code map
 
-1. The original classifier supplies pseudo-labels for the 3,500 unlabeled forget images. The parent fit combines a classifier readout, a sparse update to the last block’s MLP projection and classifier corrections informed by class counts and alternative predictions.
-2. For original and cropped views, the original teacher differentiates its pseudo-label margin with respect to pixels. The algorithm ranks 49 tiles and masks the 12 most supportive tiles with the image’s channel means. Occluded teacher predictions supply alternative-class targets.
-3. The student fits those targets on intact image features. The split uses 2,100 fit images, 700 calibration images and 700 held images. Calibration selected half of the fitted classifier update. Inference uses the standard ViT forward pass. The changed tensors are `blocks.11.mlp.fc2.weight`, `head.weight` and `head.bias`.
-
-The fitting entry point is `phase9/wildcard_occlusion.py::unlearn`. Exact replay uses `assets/cpu_readout.npz`, a 100 × 769 intermediate fitted on three CPU threads from original-model features and pseudo-labels. Its fitting code is in `phase7/solution.py`. An A100 replay with this intermediate matched every tensor and every logit for all 17,500 image/view pairs. Calling `unlearn(model, images)` also refits the intermediate from raw inputs. That run matched 17,318 of 17,500 top predictions across backends. The checkpoint patch is used only by `--restore`.
-
-| Organizer input | SHA-256 |
+| File | Role |
 | --- | --- |
-| `model.pt` | `485881a03ad064b5e6defc245ae3f45fd96714bf065ff96543a5eeca9f642571` |
-| `forget_images.npz` | `5b1d9deaf475db0905973aa028511ab35aebc33196412f5ef9ebbef09f1541c7` |
+| `adaptive.py` | Final training entry point, targeted and random masks, cross-view reliability, teacher mixing and state export |
+| `phase9/destinations_dual.py` | Conditional probability constraints and classifier optimizer |
+| `phase9/destinations_recipe.py` | Dual-prior parent (3552) |
+| `phase9/recipe.py` | Sparse MLP and class-dependent corrections (3321 and 3468) |
+| `phase7/solution.py` | CPU classifier fitting (3058) |
+| `task_template.py` | Official architecture, image preprocessing and inference |
+| `code.py` | Command line for training, exact recovery and SHA-256 verification |
+
+The training CLI uses `assets/cpu_readout.npz`, a 100 × 769 float32 classifier derived from the original model and forget set. Calling `adaptive.unlearn(model, forget_images)` refits this stage directly. The archived raw-only GPU fit produced 122 differing top predictions across 17,500 image/view evaluations compared with 3905. The supplied intermediate reproduces the scored fit.
+
+| Component | SHA-256 |
+| --- | --- |
+| Original model | `485881a03ad064b5e6defc245ae3f45fd96714bf065ff96543a5eeca9f642571` |
+| Forget images | `5b1d9deaf475db0905973aa028511ab35aebc33196412f5ef9ebbef09f1541c7` |
+| CPU readout | `6dd838db325ec761d880d21794fb99a3b0e5239d3f320f7d4c5b736af90f49ae` |

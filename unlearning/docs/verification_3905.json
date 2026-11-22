@@ -1,0 +1,66 @@
+{
+  "team_designation_for_final_testing": 3905,
+  "task": "31-unlearning",
+  "sha256": "cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b",
+  "bytes": 343628063,
+  "original_upload": {
+    "http_status": 200,
+    "response_utc": "2026-11-22T08:52:56.723125+00:00",
+    "response": {
+      "submission_id": 3905,
+      "status": "success",
+      "score": 0.1766,
+      "previous_best": 0.1762,
+      "delta": 0.0004,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    }
+  },
+  "public_dashboard": {
+    "rank": 31,
+    "score": 0.17655230543752248,
+    "leader": 0.47928531780030603,
+    "utc": "2026-11-22T10:05:55.214717+00:00",
+    "source": "http://34.147.229.55/leaderboard_page"
+  },
+  "organizer_final_selection": "The published dashboard and the supplied submission README expose no private-run assignment or selection control.",
+  "verification": {
+    "cpu_patch_recovery_sha256": "cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b",
+    "clean_a100_full_fit": {
+      "slurm_job": 15906110,
+      "exit_code": 0,
+      "output_sha256": "cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b"
+    },
+    "reference_replay": {
+      "validated_sha256": "cb6ecbdf2cc27d6485850483fb47176ee52255dbbb36a004a31c935c98dc068b",
+      "unequal_tensors": [],
+      "views": {
+        "original": {
+          "n": 3500,
+          "max_logit_error": 0.0,
+          "top1_changes": 0
+        },
+        "crop": {
+          "n": 3500,
+          "max_logit_error": 0.0,
+          "top1_changes": 0
+        },
+        "brightness": {
+          "n": 3500,
+          "max_logit_error": 0.0,
+          "top1_changes": 0
+        },
+        "blur": {
+          "n": 3500,
+          "max_logit_error": 0.0,
+          "top1_changes": 0
+        },
+        "flip": {
+          "n": 3500,
+          "max_logit_error": 0.0,
+          "top1_changes": 0
+        }
+      }
+    }
+  }
+}

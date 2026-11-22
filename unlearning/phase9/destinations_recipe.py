@@ -5,7 +5,7 @@ import torch
 from phase6.run import official, transform_batch
 from phase7.local_mlp import extract
 from phase9.destinations import head_matrix
-from phase9.destinations_dual import choices, train_student
+from phase9.destinations_dual import dual_target, train_student
 from phase9.destinations_prior import prior
 from phase9.recipe import _split, unlearn as fit_partial_parent
 
@@ -55,8 +55,8 @@ def unlearn(model, forget_images, *, cpu_readout=None, dual_scale=1.):
                 packed=extract(model,pixels,48,device.type)
                 with torch.no_grad():
                     xs=model.norm(packed['u']).float().cpu()
-                q=choices(teacher[v],packed['logits'].detach().float().cpu(),y,log_prior,62131)
-                cache[v]={'student':xs,'dual':q['dual'].float()}
+                q = dual_target(teacher[v], packed['logits'].detach().float().cpu(), y, log_prior)
+                cache[v]={'student':xs,'dual':q.float()}
             trained=train_student(cache,y,fit,base,high)
             scored_head=base+.125*(trained-base)
             final=scored_head if dual_scale==1. else torch.lerp(base,scored_head,float(dual_scale))

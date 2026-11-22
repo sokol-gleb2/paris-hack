@@ -1,4 +1,3 @@
-import numpy as np
 import torch
 from torch.nn import functional as F
 
@@ -18,19 +17,6 @@ def conditional(prob, labels):
 
 def prob(z):
     return (z / 2).softmax(1)
-
-
-def divergence(p, q):
-    return (p * (p.clamp_min(1.e-25).log() - q.clamp_min(1.e-25).log())).sum(1)
-
-
-def shuffle_indices(y, seed):
-    rng = np.random.default_rng(seed)
-    perm = np.arange(len(y))
-    for c in np.unique(y):
-        ids = rng.permutation(np.where(y == c)[0])
-        perm[ids] = np.roll(ids, 1)
-    return perm
 
 
 def moments(z, y, peak):
